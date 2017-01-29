@@ -1,5 +1,7 @@
 package at.schmitzberger;
 
+import org.junit.Assert;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -34,5 +36,9 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+    public void testLengthOfTheUniqueKey() {
+        App obj = new App();
+        Assert.assertEquals(36, obj.generateUniqueKey().length());
     }
 }
